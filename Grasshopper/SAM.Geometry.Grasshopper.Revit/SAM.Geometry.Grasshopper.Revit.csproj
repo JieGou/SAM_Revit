@@ -1,8 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFramework Condition="'$(Configuration)' == 'Debug2017' Or '$(Configuration)' == 'Release2017'">net48-windows</TargetFramework>
-	  <TargetFramework Condition="'$(Configuration)' == 'Debug2018' Or '$(Configuration)' == 'Release2018'">net48-windows</TargetFramework>
-	  <TargetFramework Condition="'$(Configuration)' == 'Debug2019' Or '$(Configuration)' == 'Release2019'">net48-windows</TargetFramework>
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">net48-windows</TargetFramework>
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">net48-windows</TargetFramework>
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2022' Or '$(Configuration)' == 'Release2022'">net48-windows</TargetFramework>
@@ -24,7 +21,7 @@
 	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <Platforms>AnyCPU;x64</Platforms>
-    <Configurations>Debug;Release;Debug2025;Debug2017;Debug2018;Debug2020;Debug2019;Debug2021;Debug2022;Debug2023;Debug2024;Release2020;Release2021;Release2022;Release2023;Release2024;Release2025;Debug2026;Release2026</Configurations>
+    <Configurations>Debug;Release;Debug2025;Debug2020;Debug2021;Debug2022;Debug2023;Debug2024;Release2020;Release2021;Release2022;Release2023;Release2024;Release2025;Debug2026;Release2026</Configurations>
   </PropertyGroup>
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -46,19 +43,7 @@
     <OutputPath>..\..\build\</OutputPath>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2018|AnyCPU'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2017|AnyCPU'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2021|AnyCPU'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2019|AnyCPU'">
     <OutputPath>..\..\build\</OutputPath>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
@@ -90,19 +75,7 @@
     <OutputPath>..\..\build\</OutputPath>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2018|x64'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2017|x64'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2021|x64'">
-    <OutputPath>..\..\build\</OutputPath>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2019|x64'">
     <OutputPath>..\..\build\</OutputPath>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
@@ -750,22 +723,7 @@
     <StartArguments />
     <StartAction>Program</StartAction>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2018|AnyCPU'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2017|AnyCPU'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2021|AnyCPU'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2019|AnyCPU'">
     <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
     <StartArguments />
     <StartAction>Program</StartAction>
@@ -805,22 +763,7 @@
     <StartArguments />
     <StartAction>Program</StartAction>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2018|x64'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2017|x64'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2021|x64'">
-    <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
-    <StartArguments />
-    <StartAction>Program</StartAction>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2019|x64'">
     <StartProgram>C:\Program Files\Rhino 6\System\Rhino.exe</StartProgram>
     <StartArguments />
     <StartAction>Program</StartAction>
