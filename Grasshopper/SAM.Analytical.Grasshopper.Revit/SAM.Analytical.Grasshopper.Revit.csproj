@@ -463,11 +463,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Classes\**" />
-    <EmbeddedResource Remove="Classes\**" />
-    <None Remove="Classes\**" />
-  </ItemGroup>
-  <ItemGroup>
 	  <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">
 		  <HintPath>$(SolutionDir)\references\Revit 2026\RevitAPI.dll</HintPath>
 		  <Private>False</Private>
@@ -614,23 +609,19 @@
     <Reference Include="SAM.Analytical.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Analytical.Grasshopper.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Architectural, Version=1.0.8458.22273, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Architectural">
       <HintPath>..\..\..\SAM\build\SAM.Architectural.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Core">
       <HintPath>..\..\..\SAM\build\SAM.Core.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Core.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Core.Grasshopper.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Geometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Geometry">
       <HintPath>..\..\..\SAM\build\SAM.Geometry.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Geometry.Grasshopper, Version=1.0.7746.21778, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Geometry.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Geometry.Grasshopper.dll</HintPath>
     </Reference>
   </ItemGroup>

@@ -626,9 +626,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\SAM_Revit\SAM.Architectural.Revit\SAM.Architectural.Revit.csproj" />
     <ProjectReference Include="..\..\SAM_Revit\SAM.Core.Revit\SAM.Core.Revit.csproj" />
     <ProjectReference Include="..\SAM.Core.Grasshopper.Revit\SAM.Core.Grasshopper.Revit.csproj" />
