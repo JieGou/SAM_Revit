@@ -10,21 +10,21 @@
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2024' Or '$(Configuration)' == 'Release2024'">net48-windows</TargetFramework>
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2025' Or '$(Configuration)' == 'Release2025'">net8.0-windows</TargetFramework>
 	  <TargetFramework Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">net8.0-windows</TargetFramework>
-    <Rhino7DefaultInstallDir>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\McNeel\Rhinoceros\7.0\Install', 'Path', null, RegistryView.Registry64))</Rhino7DefaultInstallDir>
-    <Rhino7DebugInstallDir>$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\7.0-WIP-Developer-Debug-trunk\Install', 'Path', null, RegistryView.Registry64))</Rhino7DebugInstallDir>
-    <Rhino7InstallDir>$([MSBuild]::ValueOrDefault('$(Rhino7DebugInstallDir)', '$(Rhino7DefaultInstallDir)'))</Rhino7InstallDir>
-    <Rhino7DefaultPluginsDir>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\McNeel\Rhinoceros\7.0\Install', 'Default Plug-ins Folder', null, RegistryView.Registry64))</Rhino7DefaultPluginsDir>
-    <Rhino7DebugPluginsDir>$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\7.0-WIP-Developer-Debug-trunk\Install', 'Default Plug-ins Folder', null, RegistryView.Registry64))</Rhino7DebugPluginsDir>
-    <Rhino7PluginsDir>$([MSBuild]::ValueOrDefault('$(Rhino7DebugPluginsDir)', '$(Rhino7DefaultPluginsDir)'))</Rhino7PluginsDir>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <UseWindowsForms>true</UseWindowsForms>
+	  <RhinoDefaultInstallDir>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\McNeel\Rhinoceros\8.0\Install', 'Path', null, RegistryView.Registry64))</RhinoDefaultInstallDir>
+	  <RhinoDebugInstallDir>$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\8.0-WIP-Developer-Debug-trunk\Install', 'Path', null, RegistryView.Registry64))</RhinoDebugInstallDir>
+	  <RhinoInstallDir>$([MSBuild]::ValueOrDefault('$(RhinoDebugInstallDir)', '$(RhinoDefaultInstallDir)'))</RhinoInstallDir>
+	  <RhinoDefaultPluginsDir>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\McNeel\Rhinoceros\8.0\Install', 'Default Plug-ins Folder', null, RegistryView.Registry64))</RhinoDefaultPluginsDir>
+	  <RhinoDebugPluginsDir>$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\Software\McNeel\Rhinoceros\8.0-WIP-Developer-Debug-trunk\Install', 'Default Plug-ins Folder', null, RegistryView.Registry64))</RhinoDebugPluginsDir>
+	  <RhinoPluginsDir>$([MSBuild]::ValueOrDefault('$(RhinoDebugPluginsDir)', '$(RhinoDefaultPluginsDir)'))</RhinoPluginsDir>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 	  <Deterministic>false</Deterministic>
 	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <Platforms>x64</Platforms>
-    <Configurations>Debug;Release;Debug2017;Debug2018;Debug2019;Debug2020;Debug2021;Debug2022;Debug2023;Debug2024;Debug2025;Release2020;Release2021;Release2022;Release2023;Release2024;Release2025;Debug2026;Release2026</Configurations>
+    <Configurations>Debug;Release;Debug2020;Debug2021;Debug2022;Debug2023;Debug2024;Debug2025;Release2020;Release2021;Release2022;Release2023;Release2024;Release2025;Debug2026;Release2026</Configurations>
   </PropertyGroup>
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -170,30 +170,6 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>..\..\build\</OutputPath>
     <DefineConstants>DEBUG;TRACE;Revit2020</DefineConstants>
-    <DocumentationFile>..\..\build\SAM.Analytical.Grasshopper.Revit.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2019|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\build\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;Revit2019</DefineConstants>
-    <DocumentationFile>..\..\build\SAM.Analytical.Grasshopper.Revit.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2018|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\build\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;Revit2018</DefineConstants>
-    <DocumentationFile>..\..\build\SAM.Analytical.Grasshopper.Revit.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug2017|x64'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\build\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;Revit2017</DefineConstants>
     <DocumentationFile>..\..\build\SAM.Analytical.Grasshopper.Revit.xml</DocumentationFile>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
@@ -487,11 +463,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="Classes\**" />
-    <EmbeddedResource Remove="Classes\**" />
-    <None Remove="Classes\**" />
-  </ItemGroup>
-  <ItemGroup>
 	  <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">
 		  <HintPath>$(SolutionDir)\references\Revit 2026\RevitAPI.dll</HintPath>
 		  <Private>False</Private>
@@ -638,23 +609,19 @@
     <Reference Include="SAM.Analytical.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Analytical.Grasshopper.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Architectural, Version=1.0.8458.22273, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Architectural">
       <HintPath>..\..\..\SAM\build\SAM.Architectural.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Core">
       <HintPath>..\..\..\SAM\build\SAM.Core.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Core.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Core.Grasshopper.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Geometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Geometry">
       <HintPath>..\..\..\SAM\build\SAM.Geometry.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Geometry.Grasshopper, Version=1.0.7746.21778, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="SAM.Geometry.Grasshopper">
       <HintPath>..\..\..\SAM\build\SAM.Geometry.Grasshopper.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -668,13 +635,13 @@
   </ItemGroup>
   <ItemGroup>
 	  <PackageReference Include="Grasshopper">
-		  <Version Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">7.28.23058.3001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">7.28.23058.3001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2022' Or '$(Configuration)' == 'Release2022'">7.28.23058.3001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2023' Or '$(Configuration)' == 'Release2023'">7.28.23058.3001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2024' Or '$(Configuration)' == 'Release2024'">7.28.23058.3001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2025' Or '$(Configuration)' == 'Release2025'">8.15.25019.13001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">8.18.25100.11001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2022' Or '$(Configuration)' == 'Release2022'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2023' Or '$(Configuration)' == 'Release2023'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2024' Or '$(Configuration)' == 'Release2024'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2025' Or '$(Configuration)' == 'Release2025'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">8.19.25132.1001</Version>
 		  <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
@@ -682,6 +649,7 @@
       <Version>13.0.3</Version>
     </PackageReference>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
   <PropertyGroup />
   <PropertyGroup>
