@@ -632,13 +632,8 @@
   </ItemGroup>
   <ItemGroup>
 	  <PackageReference Include="Grasshopper" Version="8.21.25188.17001">
-		  <Version Condition="'$(Configuration)' == 'Debug2020' Or '$(Configuration)' == 'Release2020'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2021' Or '$(Configuration)' == 'Release2021'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2022' Or '$(Configuration)' == 'Release2022'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2023' Or '$(Configuration)' == 'Release2023'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2024' Or '$(Configuration)' == 'Release2024'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2025' Or '$(Configuration)' == 'Release2025'">8.19.25132.1001</Version>
-		  <Version Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">8.19.25132.1001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2025' Or '$(Configuration)' == 'Release2025'">8.21.25188.17001</Version>
+		  <Version Condition="'$(Configuration)' == 'Debug2026' Or '$(Configuration)' == 'Release2026'">8.21.25188.17001</Version>
 		  <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
