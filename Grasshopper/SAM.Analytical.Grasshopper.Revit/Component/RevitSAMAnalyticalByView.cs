@@ -21,7 +21,7 @@ namespace SAM.Analytical.Grasshopper.Revit
         /// <summary>
         /// The latest version of this component
         /// </summary>
-        public override string LatestComponentVersion => "1.0.2";
+        public override string LatestComponentVersion => "1.0.3";
 
         /// <summary>
         /// Provides an Icon for the component.
@@ -38,7 +38,7 @@ namespace SAM.Analytical.Grasshopper.Revit
             get
             {
                 List<GH_SAMParam> result = new List<GH_SAMParam>();
-                result.Add(new GH_SAMParam(new Param_GenericObject() { Name = "_view", NickName = "_view", Description = "Revit View", Access = GH_ParamAccess.item }, ParamVisibility.Binding));
+                result.Add(new GH_SAMParam(new Param_GenericObject() { Name = "_view", NickName = "_view", Description = "Revit Floor Plan View", Access = GH_ParamAccess.item }, ParamVisibility.Binding));
                 result.Add(new GH_SAMParam(new Param_GenericObject() { Name = "revitLinkInstance_", NickName = "revitLinkInstance_", Description = "Revit Link Instance", Access = GH_ParamAccess.item, Optional = true }, ParamVisibility.Voluntary));
 
                 Param_Boolean boolean = null;
@@ -73,7 +73,7 @@ namespace SAM.Analytical.Grasshopper.Revit
         /// </summary>
         public RevitSAMAnalyticalByView()
           : base("Revit.SAMAnalyticalByView", "Revit.SAMAnalyticalByView",
-              "Convert Revit To SAM Analytical Object ie. Panel, Space by View",
+              "Convert Revit To SAM Analytical Object ie. Panel, Space by  Floor Plan View",
               "SAM", "Revit")
         {
      
