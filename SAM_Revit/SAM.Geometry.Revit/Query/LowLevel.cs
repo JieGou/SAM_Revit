@@ -18,7 +18,7 @@ namespace SAM.Geometry.Revit
             if (levels == null || levels.Count == 0)
                 return null;
 
-            levels.Sort((x, y) => y.Elevation.CompareTo(x.Elevation));
+            levels.Sort((x, y) => x.Elevation.CompareTo(y.Elevation));
 
 #if Revit2017 || Revit2018 || Revit2019 || Revit2020
             double levelElevation = UnitUtils.ConvertFromInternalUnits(levels.First().Elevation, DisplayUnitType.DUT_METERS);
@@ -26,10 +26,12 @@ namespace SAM.Geometry.Revit
             double levelElevation = UnitUtils.ConvertFromInternalUnits(levels.First().Elevation, UnitTypeId.Meters);
 #endif
 
-            if (System.Math.Abs(elevation - levelElevation) < Core.Tolerance.MacroDistance)
+            if (elevation - Core.Tolerance.MacroDistance < levelElevation)
                 return levels.First();
 
-            for (int i = 1; i < levels.Count; i++)
+
+            List<Level> levels_Temp = [];
+            for (int i = 0; i < levels.Count; i++)
             {
 
 #if Revit2017 || Revit2018 || Revit2019 || Revit2020
@@ -37,12 +39,13 @@ namespace SAM.Geometry.Revit
 #else
                 levelElevation = UnitUtils.ConvertFromInternalUnits(levels[i].Elevation, UnitTypeId.Meters);
 #endif
-
                 if (System.Math.Round(elevation, 3, MidpointRounding.AwayFromZero) >= System.Math.Round(levelElevation, 3, MidpointRounding.AwayFromZero))
-                    return levels[i];
+                {
+                    levels_Temp.Add(levels[i]);
+                }
             }
 
-            return levels.Last();
+            return levels_Temp.Last();
         }
     }
 }

@@ -164,7 +164,7 @@ namespace SAM.Core.Revit
             {
                 LongId longId = new LongId(System.Convert.ToInt64(((IntegerId)value).Id));
 
-                parameter.Set(((LongId)value).ToRevit());
+                parameter.Set(longId.ToRevit());
                 return true;
             }
             else if (value is LongId)
