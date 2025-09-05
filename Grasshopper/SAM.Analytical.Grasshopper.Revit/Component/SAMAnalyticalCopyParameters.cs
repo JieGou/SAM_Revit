@@ -102,7 +102,7 @@ namespace SAM.Analytical.Grasshopper.Revit
                 spatialElements = new FilteredElementCollector(document).OfCategory(BuiltInCategory.OST_MEPSpaces).Cast<SpatialElement>().ToList();
             }
 
-            index = Params.IndexOfOutputParam("elements");
+            index = Params.IndexOfOutputParam("spaces");
             if (index != -1)
                 dataAccess.SetDataList(index, spatialElements);
         }
